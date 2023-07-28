@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane styleClass="background" stylesheets="@fx.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.datafox.noterganizer.client.controller.ConnectController">
+   <center>
+      <GridPane styleClass="root">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints vgrow="NEVER" />
+            <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+         </rowConstraints>
+         <children>
+            <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="NEVER" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints vgrow="NEVER" />
+                <RowConstraints vgrow="NEVER" />
+                  <RowConstraints vgrow="NEVER" />
+                  <RowConstraints vgrow="NEVER" />
+              </rowConstraints>
+               <children>
+                  <VBox alignment="CENTER" styleClass="inner-vbox" GridPane.halignment="CENTER">
+                     <children>
+                        <Label text="Noterganizer" textAlignment="CENTER">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label text="Please connect" />
+                     </children>
+                  </VBox>
+                  <VBox styleClass="inner-vbox" GridPane.rowIndex="1">
+                     <children>
+                        <Label text="Server address:" />
+                        <TextField fx:id="server" promptText="address.com" />
+                     </children>
+                  </VBox>
+                  <Button fx:id="connect" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Connect" GridPane.rowIndex="3" />
+                  <VBox styleClass="inner-vbox" GridPane.rowIndex="2">
+                     <children>
+                        <CheckBox fx:id="autoConnect" mnemonicParsing="false" text="Connect automatically" />
+                        <Label text="(can be disabled in Settings)" />
+                     </children>
+                  </VBox>
+               </children>
+               <styleClass>
+                  <String fx:value="large-border" />
+                  <String fx:value="grid-pane" />
+                  <String fx:value="foreground" />
+               </styleClass>
+            </GridPane>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem fx:id="exit" mnemonicParsing="false" text="Exit" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem fx:id="about" mnemonicParsing="false" text="About Noterganizer" />
+                  </items>
+                </Menu>
+              </menus>
+               <styleClass>
+                  <String fx:value="foreground" />
+                  <String fx:value="small-border-up" />
+               </styleClass>
+            </MenuBar>
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,6 @@
+group = 'me.datafox.noterganizer'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}

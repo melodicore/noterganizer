@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane styleClass="background" stylesheets="@fx.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.datafox.noterganizer.client.controller.MainController">
+   <center>
+      <GridPane styleClass="root" BorderPane.alignment="CENTER">
+         <columnConstraints>
+            <ColumnConstraints hgrow="NEVER" maxWidth="1.7976931348623157E308" minWidth="200.0" prefWidth="250.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints vgrow="NEVER" />
+            <RowConstraints minHeight="0.0" valignment="CENTER" vgrow="ALWAYS" />
+         </rowConstraints>
+         <children>
+            <MenuBar GridPane.columnSpan="2">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                        <MenuItem fx:id="settings" mnemonicParsing="false" text="Settings" />
+                        <MenuItem fx:id="changePassword" mnemonicParsing="false" text="Change password" />
+                        <MenuItem fx:id="logout" mnemonicParsing="false" text="Logout" />
+                    <MenuItem fx:id="exit" mnemonicParsing="false" text="Exit" />
+                  </items>
+                </Menu>
+                  <Menu fx:id="spaces" mnemonicParsing="false" text="Spaces">
+                     <items>
+                        <Menu fx:id="openSpace" mnemonicParsing="false" text="Open space" />
+                        <MenuItem fx:id="createSpace" mnemonicParsing="false" text="Create space..." />
+                     </items>
+                  </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem fx:id="about" mnemonicParsing="false" text="About Noterganizer" />
+                  </items>
+                </Menu>
+              </menus>
+               <styleClass>
+                  <String fx:value="foreground" />
+                  <String fx:value="small-border-up" />
+               </styleClass>
+            </MenuBar>
+            <GridPane GridPane.rowIndex="1">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="ALWAYS" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints vgrow="ALWAYS" />
+               </rowConstraints>
+               <children>
+                  <ScrollPane fitToWidth="true" hbarPolicy="NEVER" maxWidth="1.7976931348623157E308" minHeight="0.0">
+                     <content>
+                        <TreeView fx:id="notes" minHeight="0.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+               <styleClass>
+                  <String fx:value="grid-pane" />
+                  <String fx:value="foreground" />
+                  <String fx:value="large-border-top-right" />
+               </styleClass>
+            </GridPane>
+            <GridPane fx:id="content" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints valignment="TOP" vgrow="ALWAYS" />
+               </rowConstraints>
+               <children>
+                     <VBox alignment="CENTER" styleClass="inner-vbox">
+                         <children>
+                        <Label text="Welcome to" />
+                             <Label text="Noterganizer" textAlignment="CENTER">
+                                 <font>
+                                     <Font size="25.0" />
+                                 </font>
+                             </Label>
+                             <Label text="Please select or create a space in the Spaces menu" />
+                         </children>
+                     </VBox>
+               </children>
+               <styleClass>
+                  <String fx:value="large-border-top-left" />
+                  <String fx:value="grid-pane" />
+                  <String fx:value="foreground" />
+               </styleClass>
+            </GridPane>
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>

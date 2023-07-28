@@ -1,0 +1,11 @@
+plugins {
+    id("java")
+    id('io.freefair.lombok') version "$lombokVersion"
+}
+
+group = 'me.datafox.noterganizer'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}

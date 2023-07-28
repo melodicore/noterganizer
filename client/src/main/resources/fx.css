@@ -1,0 +1,299 @@
+* {
+    -color-accent: #a27dd4;
+    -color-accent-light: derive(-color-accent, 50%);
+    -color-accent-very-light: derive(-color-accent, 75%);
+    -color-accent-extra-light: derive(-color-accent, 97.5%);
+    -color-accent-dark: derive(-color-accent, -25%);
+    -color-error: #e03f3f;
+    -color-text: #505050;
+
+    -color-front: #ffffff;
+    -color-back: derive(-color-front, -10%);
+
+    -color-control: #fafafa;
+    -color-hover: derive(-color-control, 50%);
+    -color-pressed: derive(-color-control, -5%);
+
+    -color-border: #c0c0c0;
+    -color-border-pressed: derive(-color-border, -5%);
+
+    -fx-text-fill: -color-text;
+
+    -fx-focus-color: -color-accent;
+
+    -mdfx-font-color: -color-text;
+    -mdfx-link-color: -color-accent-dark;
+    -mdfx-border-color-1: #888;
+
+    -mdfx-bg-color-1: -color-control;
+    -mdfx-bg-color-2: -color-pressed;
+    -mdfx-bg-color-3: -color-accent-very-light;
+
+    -mdfx-bq-color-border: -color-accent;
+    -mdfx-bq-color-background: -color-accent-extra-light;
+}
+
+.markdown-text {
+ }
+
+.markdown-italic {
+    -fx-font-style: italic;
+}
+.markdown-bold {
+    -fx-font-weight: bold;
+}
+.markdown-strikethrough {
+    -fx-strikethrough: true;
+}
+
+.foreground {
+    -fx-background-color: -color-front;
+}
+
+.background {
+    -fx-background-color: -color-back;
+}
+
+.context-menu {
+    -fx-border-style: solid;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-border-color: -color-border;
+}
+
+.button,
+.toggle-button,
+.text-field,
+.text-area,
+.check-box .box,
+.scroll-bar .thumb {
+    -fx-background-color: -color-control;
+    -fx-border-style: solid;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-border-color: -color-border;
+}
+
+.button:hover,
+.toggle-button:hover,
+.text-field:hover,
+.text-area:hover .content,
+.check-box:hover .box,
+.scroll-bar .thumb:hover {
+    -fx-background-color: -color-hover;
+}
+
+.button:focused,
+.text-field:focused,
+.text-area:focused,
+.check-box:focused .box,
+.scroll-bar .thumb:focused {
+    -fx-border-color: -color-accent;
+}
+
+.toggle-button:focused {
+    -fx-border-color: -color-accent-very-light;
+}
+
+.toggle-button:selected {
+    -fx-border-color: -color-accent;
+    -fx-background-color: -color-accent-extra-light;
+}
+
+.button:pressed,
+.toggle-button:pressed,
+.text-field:pressed,
+.check-box:pressed .box,
+.scroll-bar .thumb:pressed  {
+    -fx-background-color: -color-pressed;
+    -fx-border-color: -color-border-pressed;
+}
+
+.menu-item:hover,
+.menu-item:focused,
+.menu-button:hover,
+.menu-button:showing,
+.menu-button:focused {
+    -fx-background-color: -color-accent-light;
+}
+
+.text-field:error {
+    -fx-border-color: -color-error;
+}
+
+.tooltip {
+    -fx-background-color: -color-control;
+    -fx-border-style: solid;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-border-color: -color-border;
+}
+
+.tree-view {
+    -fx-background-color: -color-front;
+}
+
+.tree-cell {
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 1;
+}
+
+.tree-cell:focused {
+    -fx-background-color: transparent;
+    -fx-border-color: -color-accent;
+}
+
+.tree-cell:selected {
+    -fx-background-color: -color-accent-extra-light;
+}
+
+.tree-cell:drag-over {
+    -fx-border-style: solid;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-border-color: -color-accent;
+    -fx-background-insets: 0 0 5 0;
+    -fx-border-insets: 0 0 5 0;
+}
+
+.tree-cell .tree-disclosure-node .arrow,
+.tree-cell:selected .tree-disclosure-node .arrow,
+.tree-cell:focused .tree-disclosure-node .arrow {
+    -fx-background-color: -color-text;
+}
+
+.titled-pane {
+    -fx-border-color: transparent;
+}
+
+.titled-pane .title {
+    -fx-background-color: transparent;
+}
+
+.titled-pane .content {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.titled-pane .arrow {
+    -fx-effect: null;
+}
+
+.text-area {
+    -fx-faint-focus-color: transparent;
+    -fx-font-family: monospace;
+}
+
+.text-area .content {
+    -fx-background-color: transparent;
+}
+
+.text-area:focused .content {
+    -fx-background-color: transparent;
+}
+
+.text-area:pressed {
+    -fx-border-color: -color-border-pressed;
+}
+
+.text-area:pressed .content {
+    -fx-background-color: -color-pressed;
+}
+
+.text-area .content {
+    -fx-background-radius: 5;
+}
+
+.scroll-pane {
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar {
+    -fx-font-size: 9;
+}
+
+.root {
+    -fx-background-color: -color-back;
+    -fx-hgap: 20;
+    -fx-vgap: 20;
+    -fx-alignment: center;
+}
+
+.large-border {
+    -fx-border-style: solid;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-border-color: -color-border;
+}
+
+.large-border-top-left {
+    -fx-border-style: solid;
+    -fx-border-width: 1 0 0 1;
+    -fx-border-radius: 10 0 0 0;
+    -fx-background-radius: 10 0 0 0;
+    -fx-border-color: -color-border;
+}
+
+.large-border-top-right {
+    -fx-border-style: solid;
+    -fx-border-width: 1 1 0 0;
+    -fx-border-radius: 0 10 0 0;
+    -fx-background-radius: 0 10 0 0;
+    -fx-border-color: -color-border;
+}
+
+.small-border {
+    -fx-border-style: solid;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-border-color: -color-border;
+}
+
+.small-border-up {
+    -fx-border-style: solid;
+    -fx-border-width: 1;
+    -fx-border-radius: 0 0 5 5;
+    -fx-background-radius: 0 0 5 5;
+    -fx-border-color: -color-border;
+}
+
+.grid-pane {
+    -fx-padding: 10;
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+}
+
+.inner-grid-pane {
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+}
+
+.vbox,
+.hbox {
+    -fx-spacing: 10;
+}
+
+.inner-vbox,
+.inner-hbox {
+    -fx-spacing: 5;
+}
+
+.align-right {
+    -fx-alignment: center-right;
+}

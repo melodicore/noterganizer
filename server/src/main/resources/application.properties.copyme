@@ -1,0 +1,4 @@
+server.port=8080
+spring.data.mongodb.auto-index-creation=true
+spring.data.mongodb.database=noterganizer
+# noterganizer.remember.token=token
