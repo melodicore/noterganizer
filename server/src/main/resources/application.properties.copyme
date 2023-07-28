@@ -1,4 +1,13 @@
-server.port=8080
+http.port=80
+server.port=443
+
+server.ssl.enabled=true
+server.ssl.key-store-type=PKCS12
+server.ssl.key-store=[path to keystore]
+server.ssl.key-store-password=[password]
+server.ssl.key-alias=[alias]
+
 spring.data.mongodb.auto-index-creation=true
 spring.data.mongodb.database=noterganizer
-# noterganizer.remember.token=token
+
+noterganizer.remember.token=[token]

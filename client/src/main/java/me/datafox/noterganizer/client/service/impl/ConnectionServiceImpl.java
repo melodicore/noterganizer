@@ -178,7 +178,7 @@ public class ConnectionServiceImpl implements ConnectionService {
         if(address.isBlank()) throw new EmptyAddressException();
         if(!address.startsWith("http://") ||
                 !address.startsWith("https://")) {
-            address = "http://" + address;
+            address = "https://" + address;
         }
         if(!address.endsWith("/")) {
             address = address + "/";

@@ -5,7 +5,8 @@ build/
 !**/src/test/**/build/
 
 ### Secrets ###
-src/main/resources/application.properties
+src/main/resources/
+!src/main/resources/*.copyme
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
