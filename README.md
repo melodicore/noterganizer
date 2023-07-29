@@ -8,9 +8,9 @@ a part of my [programming portfolio](https://datafox.me).
 
 ## Usage
 
-Builds for the client can be downloaded from 
-[Releases](https://github.com/melodicore/noterganizer/releases), or
-alternatively you can download or clone the repository and use the
+Builds for the client will be available in 
+[Releases](https://github.com/melodicore/noterganizer/releases), 
+but for now you can download or clone the repository and use the
 gradle task `run` to run the application or use jpackage to build 
 an executable binary.
 
